@@ -1,26 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="primerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-1R-Io3">
+                                <rect key="frame" x="40" y="20" width="240" height="162"/>
+                                <color key="backgroundColor" red="0.0" green="0.51462823152542114" blue="0.51462823152542114" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.51874355380952519" blue="0.36389319314603086" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="9KN-pq-85g" kind="embed" id="t12-it-Xsi"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU5-NX-KY2">
+                                <rect key="frame" x="137" y="386" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-jv-Aw1">
+                                <rect key="frame" x="60" y="329" width="200" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KXF-1R-Io3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="AEp-j6-qPw"/>
+                            <constraint firstItem="LsE-jv-Aw1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="Eqw-8G-Hpe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mU5-NX-KY2" secondAttribute="bottom" constant="64" id="RIu-OA-JXC"/>
+                            <constraint firstItem="LsE-jv-Aw1" firstAttribute="top" secondItem="KXF-1R-Io3" secondAttribute="bottom" constant="147" id="Yjj-al-uGk"/>
+                            <constraint firstItem="LsE-jv-Aw1" firstAttribute="centerX" secondItem="mU5-NX-KY2" secondAttribute="centerX" id="bpm-OP-me4"/>
+                            <constraint firstItem="KXF-1R-Io3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gdk-P7-Ffi"/>
+                            <constraint firstItem="KXF-1R-Io3" firstAttribute="centerX" secondItem="LsE-jv-Aw1" secondAttribute="centerX" id="iW5-iw-16c"/>
+                            <constraint firstItem="KXF-1R-Io3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qkC-7u-QNi"/>
+                            <constraint firstItem="mU5-NX-KY2" firstAttribute="top" secondItem="LsE-jv-Aw1" secondAttribute="bottom" constant="27" id="qlN-Gb-AOG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="133.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yYI-rW-vVj">
+            <objects>
+                <viewController id="9KN-pq-85g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrO-Ub-yC6">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="162"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOg-3c-wOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="17.95774647887324"/>
         </scene>
     </scenes>
 </document>
